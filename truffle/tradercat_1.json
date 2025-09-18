@@ -1,0 +1,19 @@
+{
+  "name": "Trader Cat #1",
+  "description": "A fearless cat trader chasing alpha in the markets. The first NFT in the Trader Cat collection.",
+  "image": "ipfs://bafybeibuct4jxcasg7mezdxbgwdb5zumf56qhhvathhbb7n72hbrrd2cdm.png",
+  "attributes": [
+    {
+      "trait_type": "Mood",
+      "value": "Bullish"
+    },
+    {
+      "trait_type": "Outfit",
+      "value": "Hoodie"
+    },
+    {
+      "trait_type": "Special Skill",
+      "value": "Chart Analysis"
+    }
+  ]
+}
