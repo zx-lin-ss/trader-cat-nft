@@ -1,5 +1,19 @@
 {
-    "name": "TraderCat1NFT", 
-    "description": "An Trader Cat NFT stored with image hosted on GitHub", 
-    "image": "https://github.com/zx-lin-ss/trader-cat-nft/blob/9d2cb81a218b3c65807758492f43d71ba2ffac38/cat-trader-1.png"
+  "name": "Trader Cat #1",
+  "description": "A fearless cat trader chasing alpha in the markets. The first NFT in the Trader Cat collection.",
+  "image": "ipfs://bafybeibuct4jxcasg7mezdxbgwdb5zumf56qhhvathhbb7n72hbrrd2cdm.png",
+  "attributes": [
+    {
+      "trait_type": "Mood",
+      "value": "Bullish"
+    },
+    {
+      "trait_type": "Outfit",
+      "value": "Hoodie"
+    },
+    {
+      "trait_type": "Special Skill",
+      "value": "Chart Analysis"
+    }
+  ]
 }
