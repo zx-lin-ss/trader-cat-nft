@@ -1,0 +1,10 @@
+{
+  "name": "Trader Cat #2",
+  "description": "A sharp grey tabby Trader Cat with round glasses and a business suit.",
+  "image": "https://raw.githubusercontent.com/zx-lin-ss/trader-cat-nft/refs/heads/main/trader_cat_NFT/images/tradercat2.png",
+  "attributes": [
+    { "trait_type": "Fur", "value": "Grey Tabby" },
+    { "trait_type": "Accessory", "value": "Round Glasses" },
+    { "trait_type": "Clothing", "value": "Suit & Tie" }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Trader Cat #1",
+  "description": "A fearless orange Trader Cat wearing an eyepatch and suit, always hunting for arbitrage.",
+  "image": "https://raw.githubusercontent.com/zx-lin-ss/trader-cat-nft/refs/heads/main/trader_cat_NFT/images/tradercat1.png",
+  "attributes": [
+    { "trait_type": "Fur", "value": "Orange" },
+    { "trait_type": "Accessory", "value": "Eyepatch" },
+    { "trait_type": "Clothing", "value": "Suit & Tie" }
+  ]
+}
