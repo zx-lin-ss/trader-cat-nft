@@ -3,49 +3,33 @@
 pragma solidity ^0.8.27;
 
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import {ERC721URIStorage} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
-contract TraderCat is ERC721, ERC721URIStorage, Ownable {
+contract TraderCat is ERC721, Ownable {
     uint256 private _nextTokenId;
+
+    // Metadata JSON file (not raw PNG!)
+    string private constant TOKEN_URI = "https://raw.githubusercontent.com/zx-lin-ss/trader-cat-nft/main/trader_cat_1.json";
 
     constructor(address initialOwner)
         ERC721("TraderCat", "TDC")
         Ownable(initialOwner)
     {}
 
-    function _baseURI() internal pure override returns (string memory) {
-        return "https://github.com/zx-lin-ss/trader-cat-nft/blob/9d2cb81a218b3c65807758492f43d71ba2ffac38/cat-trader-1.png";
-    }
-
-    function safeMint(address to, string memory uri)
-        public
-        onlyOwner
-        returns (uint256)
-    {
+    function safeMint(address to) public onlyOwner returns (uint256) {
         uint256 tokenId = _nextTokenId++;
         _safeMint(to, tokenId);
-        _setTokenURI(tokenId, uri);
         return tokenId;
     }
 
-    // The following functions are overrides required by Solidity.
-
+    // All tokens share the same metadata.json
     function tokenURI(uint256 tokenId)
         public
-        view
-        override(ERC721, ERC721URIStorage)
+        pure
+        override
         returns (string memory)
     {
-        return super.tokenURI(tokenId);
-    }
-
-    function supportsInterface(bytes4 interfaceId)
-        public
-        view
-        override(ERC721, ERC721URIStorage)
-        returns (bool)
-    {
-        return super.supportsInterface(interfaceId);
+        require(tokenId >= 0, "Token does not exist");
+        return TOKEN_URI;
     }
 }
