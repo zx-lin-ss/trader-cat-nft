@@ -3,6 +3,7 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 const mnemonic = process.env.MNEMONIC;
 const infuraProjectId = process.env.INFURA_PROJECT_ID;
+const etherscanAPI = process.env.ETHERSCAN_API_KEY;
 
 module.exports = {
   networks: {
@@ -35,5 +36,13 @@ module.exports = {
         },
       }
     }
-  }
+  },
+
+  api_keys: {
+    etherscan: etherscanAPI
+  },
+
+    plugins: [
+    'truffle-plugin-verify'
+  ]
 };
