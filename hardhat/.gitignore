@@ -1,17 +1,28 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Environment variables (NEVER commit this!)
 .env
+.env.local
+.env.*.local
 
 # Hardhat files
-/cache
-/artifacts
-
-# TypeChain files
-/typechain
-/typechain-types
-
-# solidity-coverage files
-/coverage
-/coverage.json
+cache/
+artifacts/
+coverage/
+coverage.json
+typechain-types/
 
 # Hardhat Ignition default folder for deployments against a local node
 ignition/deployments/chain-31337
+
+# Misc
+.DS_Store
+*.log
+*.swp
+.vscode/
+.idea/
+
+# Build files
+dist/
+build/
