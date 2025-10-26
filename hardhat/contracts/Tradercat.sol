@@ -5,6 +5,7 @@ pragma solidity ^0.8.27;
 import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {ERC721URIStorage} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
+// import "hardhat/console.sol";    // ← Add this
 
 contract Tradercat is ERC721, ERC721URIStorage, Ownable {
     uint256 private _nextTokenId;
@@ -24,6 +25,8 @@ contract Tradercat is ERC721, ERC721URIStorage, Ownable {
         returns (uint256)
     {
         uint256 tokenId = _nextTokenId++;
+   //     console.log("Minting token ID:", tokenId);  // ← Add this
+     //   console.log("To address:", to);              // ← Add this
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
         return tokenId;
